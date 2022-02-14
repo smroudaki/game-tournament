@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Users\Commands\AdminLoginCommand.cs" />
+    <Compile Remove="Users\Handlers\AdminLoginCommandHandler.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="9.1.3" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="9.1.3" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="8.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="3.1.7" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.7" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="System.Text.Json" Version="4.7.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GameTournament.Domain\GameTournament.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Activities\Commands\" />
+    <Folder Include="Activities\Validators\" />
+    <Folder Include="Admins\ViewModels\" />
+    <Folder Include="Admins\Queries\" />
+    <Folder Include="ContactUsMessages\ViewModels\" />
+    <Folder Include="ContactUsMessages\Queries\" />
+    <Folder Include="Documents\Validators\" />
+    <Folder Include="Documents\Queries\" />
+    <Folder Include="Provinces\Commands\" />
+    <Folder Include="Provinces\Validators\" />
+  </ItemGroup>
+
+</Project>
